@@ -1,0 +1,16 @@
+spring:
+  config:
+    activate:
+      on-profile: local
+
+matchmaking:
+  title-message: "LOCAL - matchmaking platform"
+
+---
+spring:
+  config:
+    activate:
+      on-profile: dev
+
+matchmaking:
+  title-message: "DEV - matchmaking platform"
