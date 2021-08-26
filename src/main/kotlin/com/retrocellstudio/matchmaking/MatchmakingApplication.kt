@@ -9,22 +9,8 @@ import javax.annotation.PostConstruct
 private val logger = KotlinLogging.logger {}
 
 @SpringBootApplication
-class MatchmakingApplication {
-    @Value("\${matchmaking.title-message}")
-    val titleMessage: String = ""
-
-    @PostConstruct
-    fun printTitleMessage() {
-        println(titleMessage);
-    }
-}
+class MatchmakingApplication
 
 fun main(args: Array<String>) {
     runApplication<MatchmakingApplication>(*args)
-
-    logger.trace("trace test")
-    logger.debug { "debug test" }
-    logger.info { "info test" }
-    logger.warn ("warn test")
-    logger.error { "error test" }
 }
