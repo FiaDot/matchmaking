@@ -9,5 +9,5 @@ create table if not exists stocks
     created_date DATETIME,
     index idx_name (name),
     index idx_code (code),
-    index idx_ticker (ticker),
+    index idx_ticker (ticker)
 );

@@ -1,0 +1,19 @@
+version: "3.4"
+
+x-common-mysql-env: &common-mysql-env
+  MYSQL_ROOT_PASSWORD: asdf1234!
+  MYSQL_USER: matchmaking
+  MYSQL_PASSWORD: asdf1234!
+
+services:
+  mysql:
+    container_name: mysql-matchmaking
+    image: mysql:5.7
+    environment:
+      MYSQL_DATABASE: matchmaking
+      <<: *common-mysql-env
+    volumes:
+      - ./src/main/resources/sql:/docker-entrypoint-initdb.d/
+    ports:
+      - 33306:3306
+    command: --default-authentication-plugin=mysql_native_password
