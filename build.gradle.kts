@@ -21,6 +21,12 @@ dependencies {
     implementation("org.jetbrains.kotlin:kotlin-stdlib-jdk8")
     implementation("io.github.microutils:kotlin-logging:1.12.5") // Logging
     implementation("org.springframework.boot:spring-boot-starter-web") // MVC
+    implementation("org.jetbrains.kotlin:kotlin-allopen") // Data : Hibernate 특징 맞추기 위해
+    implementation("org.jetbrains.kotlin:kotlin-noarg") // Data : Hibernate 특징 맞추기 위해
+    implementation("org.springframework.boot:spring-boot-starter-data-jpa") // Data : JPA
+
+    runtimeOnly("mysql:mysql-connector-java") // MySQL
+
     testImplementation("org.springframework.boot:spring-boot-starter-test")
 }
 
