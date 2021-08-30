@@ -2,15 +2,27 @@ spring:
   config:
     activate:
       on-profile: local
-
-matchmaking:
-  title-message: "LOCAL - matchmaking platform"
+  datasource:
+    url: "jdbc:mysql://localhost:33306/matchmaking"
+    username: "matchmaking"
+    password: "asdf1234!"
+  jpa:
+    hibernate:
+      ddl-auto: update
+    generate-ddl: true
+    show-sql: true
 
 ---
 spring:
   config:
     activate:
       on-profile: dev
-
-matchmaking:
-  title-message: "DEV - matchmaking platform"
+  datasource:
+    url: "jdbc:mysql://somewhere-dev:33306/matchmaking"
+    username: "matchmaking"
+    password: "asdf1234!"
+  jpa:
+    hibernate:
+      ddl-auto: update
+    generate-ddl: true
+    show-sql: true
