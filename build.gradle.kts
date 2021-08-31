@@ -8,6 +8,17 @@ plugins {
     kotlin("plugin.spring") version "1.5.21"
 }
 
+//noArg {
+//    annotation("javax.persistence.Entity")
+//    annotation("javax.persistence.MappedSuperclass")
+//    annotation("javax.persistence.Embeddable")
+//}
+//allOpen {
+//    annotation("javax.persistence.Entity")
+//    annotation("javax.persistence.MappedSuperclass")
+//    annotation("javax.persistence.Embeddable")
+//}
+
 group = "com.retrocellstudio"
 version = "0.0.1-SNAPSHOT"
 java.sourceCompatibility = JavaVersion.VERSION_1_8

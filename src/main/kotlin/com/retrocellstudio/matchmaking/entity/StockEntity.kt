@@ -10,22 +10,20 @@ import javax.persistence.*
 class StockEntity (
     @Id
     @GeneratedValue(strategy = GenerationType.AUTO)
+    // @Column(name = "id", nullable = false, updatable = false)
     val id: String,
-    val type: String,
-    val name: String,
-    val code: String,
-    val ticker: String,
-    val updatedDate: LocalDateTime,
-    val createdDate: LocalDateTime,
+    var type: String,
+    var name: String,
+    var code: String,
+    var ticker: String,
+    var updatedDate: LocalDateTime,
+    var createdDate: LocalDateTime,
 )
 
 fun StockEntity.toModel(): Stock {
     return Stock(
         id = this.id,
-        type = this.type,
-        name = this.name,
-        code = this.code,
-        ticker = this.ticker,
+        type = this.type
     )
 }
 
