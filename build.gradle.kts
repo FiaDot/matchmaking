@@ -36,7 +36,7 @@ dependencies {
     implementation("org.jetbrains.kotlin:kotlin-allopen") // Data : Hibernate 특징 맞추기 위해
     implementation("org.jetbrains.kotlin:kotlin-noarg") // Data : Hibernate 특징 맞추기 위해
     implementation("org.springframework.boot:spring-boot-starter-data-jpa") // Data : JPA
-
+    implementation("org.springframework.boot:spring-boot-starter-webflux") // netty
     runtimeOnly("mysql:mysql-connector-java") // MySQL
 
     testImplementation("org.springframework.boot:spring-boot-starter-test")
